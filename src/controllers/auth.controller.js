@@ -1,8 +1,8 @@
-import User from "../models/user.model.js"
-import bcrypt from "bcryptjs"
-import { accessToken } from "../libs/token.js"
+const User= require ("../models/user.model.js")
+const bcrypt= require ("bcryptjs")
+const accessToken= require ("../libs/token.js")
 
-export const registro= async (req, res)=>{
+async function registro (req, res){
     const {username, email, password}= req.body
 
    try {
@@ -28,7 +28,7 @@ export const registro= async (req, res)=>{
    }
 }
 
-export const login= async (req, res)=>{
+async function login(req, res){
     const {email, password}= req.body
     
    try {
@@ -56,14 +56,14 @@ export const login= async (req, res)=>{
    }
 }
 
- export const logout= (req, res)=>{
+async function logout(req, res){
     res.cookie('token', "", {
         expires: new Date(0)
     })
     return res.sendStatus(200)
  }
 
-export const profile= async (req, res)=> {
+ async function profile(req, res){
    const usuarioEncontrado= await User.findById(req.user.id)
    if(!usuarioEncontrado) res.status(400).json({message: 'usuario no encontrado'})
 
@@ -76,6 +76,8 @@ export const profile= async (req, res)=> {
     })
    res.send('profile')
 }
+
+module.exports = { registro, login, logout, profile }
 
 
 /* Registro
@@ -92,7 +94,7 @@ export const profile= async (req, res)=> {
 4 se genera un token del usuario encontrado*/
 
 /* logout
-1 responde con una cookie que contieene un token vacio
+1 responde con una cookie que contiene un token vacio
 2 la sesion no expira ya que esta en 0 */
 
 /* Profile

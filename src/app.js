@@ -3,6 +3,8 @@ const path= require('path')
 const exphbs= require('express-handlebars')
 const morgan= require('morgan')
 const cookieParser= require('cookie-parser')
+const fontend = require('./routes/frontend.routes')
+const backend= require('./routes/auth.routes')
 
 
 /* Inicialización */
@@ -26,15 +28,12 @@ app.use(morgan('dev'))  /* muestra las peticiones http por consola */
 app.use(express.json()) /* convierte los objetos javascript a objeto json */
 app.use(cookieParser()) /* convierte las cookies a un objeto json */
 
+/* Rutas */
+app.use('/', fontend)
+app.use('/api', backend);
+
 /* Archivos estáticos */
 app.use(express.static(path.join(__dirname, 'public')))
 
-
-/* Rutas */
-app.get('/', (req, res)=>{
-    res.render('index', {
-        title: 'Inicio',
-        message: 'Bienvenidos a nuestra página'})
-})
 
 module.exports= app

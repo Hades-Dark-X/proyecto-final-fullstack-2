@@ -1,7 +1,7 @@
-import jwt from 'jsonwebtoken'
-import { tokenSecreto } from '../config.js'
+const jwt= require ('jsonwebtoken')
+const tokenSecreto= require  ('../config.js')
 
-export const authRequerida= (req, res, next)=>{
+module.exports.authRequerida= (req, res, next)=>{
     const {token}= req.cookies
 
     if(!token)
@@ -14,4 +14,3 @@ export const authRequerida= (req, res, next)=>{
         next()
     })
 }
-    
