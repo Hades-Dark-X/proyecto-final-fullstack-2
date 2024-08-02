@@ -1,0 +1,21 @@
+<section class="formContainer">
+    <form class="form" action="/contacto" method="post">
+    {{#if statusMessage}}
+    <span>{{statusMessage}}</span>
+    {{/if}}
+        <label for="nombre"></label>
+        <input type="text" name="nombre" autofocus placeholder="Nombre">
+        <label for="apellido"></label>
+        <input type="text" name="apellido" autofocus placeholder="Apellido">
+        <label for="email"></label>
+        <input type="email" name="email" autofocus placeholder="E-mail">
+        <label for="mensaje"></label>
+        <textarea name="mensaje" cols="30" rows="6" placeholder="Su mensaje aquí.."></textarea>
+        <div class="btn">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+           
+
+        </div>
+    </form>
+</section>
