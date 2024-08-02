@@ -1,0 +1,22 @@
+<h1>Registrese aquí....</h1>
+
+<section class="formContainer">
+    <form class="form" action="/registro" method="post">
+    {{#if statusMessage}}
+    <span>{{statusMessage}}</span>
+    {{/if}}
+        <label for="usuario"></label>
+        <input type="text" name="usuario" autofocus placeholder="Usuario">
+        <label for="contraseña"></label>
+        <input type="number" name="contraseña" autofocus placeholder="Contraseña">
+        <label for="email"></label>
+        <input type="email" name="email" autofocus placeholder="E-mail">
+        
+        <div class="btn">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Registro">
+           
+
+        </div>
+    </form>
+</section>
