@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:lightblue
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    font-size: 1.rem;
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    
+
+}
+
+/* Header gneral del documento */
+.header {
+ 
+    flex-direction: column; 
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color:lightblue;
+    background-image: url("../imagenes/imagen1.jpg");
+    background-repeat: no-repeat;
+}
+
+.header h1 {
+    font-family: "Chewy", cursive;
+    font-size: 3rem;
+    margin-right: 1rem;
+    margin-left: 3rem;
+ 
+    
+}
+
+.header h2 {
+    font-family: "Chewy", cursive;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    text-align: end;
+
+
+}
+
+
+.header p {
+    margin-left: 20%;
+    font-size: 1.2rem;   
+}
+
+/* Navbar */
+ 
+nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+   
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(210, 255, 240, 0.8));
+    text-align: end;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 2rem;
+
+}
+
+a {
+
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: "Chewy", cursive;
+    color: black;
+
+}
+
+li {
+    display: inline-block;
+    width: 15ch;
+
+}
+
+ul :hover a {
+color: white;
+background-color:slategray;
+}
+
+/* --------------------MEDIAS QUERIES ------------------- */
+@media screen and (max-width: 1200px) {
+    .header {
+        align-items: center;
+        justify-content: space-between;
+        background-position:bottom;
+        height: 190px;
+      
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        text-align: end;
+        
+    }
+
+    .header p {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content:end;
+        height: 0;
+        font-size: 1rem;
+        margin-right: 2rem;
+      
+       
+
+    }
+
+    ul {
+        text-align:end;
+        margin: 0;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        
+    }
+
+
+    
+
+    
+}
+
+@media screen and (max-width: 720px) {
+
+    .header {
+        align-items:end;
+        justify-content: space-between;
+        background-position: bottom;
+        height: 190px;
+        
+    }
+
+    
+    .header h1 {
+        font-size: 1rem;
+        margin: 0;
+        text-align: end;
+        margin-right: 1rem;
+        
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        
+    }
+
+
+       
+  nav li {
+    display: block;
+    width: 8ch;
+  }
+
+  nav a {
+    font-size: .9rem;
+    text-decoration: none;
+    font-family: "Chewy", cursive;
+    background-color: black;
+    color: whitesmoke;
+    padding: .1rem;
+  }
+
+   
+     
+
+
+}
+
+/* ------Estilos para el formulario---------- */
+
+.formContainer {
+    z-index: -1;
+    display: flex;
+    background-repeat: no-repeat;
+    margin-top:  1%;
+    
+ 
+
+}
+
+.form {
+    padding: 2rem;
+    margin: 35%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1%;
+    background-color:cornflowerblue;
+    opacity: .9;
+    margin-top:15px;
+   
+}
+
+form input, textarea {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    
+}
+
+.form textarea {
+    overflow: auto;
+    resize: none;
+    margin: 0 2rem 1.5rem 2rem;
+}
+
+.form p {
+   
+    margin-right:  20%;
+}
+
+.btn {
+    align-self: center;
+}
+
+.btn input {
+    width: 6rem;
+    height: 2rem;
+    font-size: large;
+    color:snow;
+    background-color: black;
+    border-radius: 5%;
+}
+
+.btn input :hover {
+    background-color: rgb(204, 178, 178);
+    background-color: chocolate;
+    color: black;
+    cursor: pointer;
+}
+
+form span {
+    font-size:1rem;
+    background-color: beige;
+    padding: .5rem;
+    box-shadow: 2px 2px 5px black;
+    margin: 1rem 0 2rem 0;
+}
+
+/* Estilos del footer */
+
+footer{
+    background-color:darkcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    margin-top: 20px;
+  
+}
+
+.footer-social,
+.footer-legal {
+    width: 100%;
+    margin: 2em 0;
+
+
+}
+
+footer li {
+    width: 100%;
+    line-height: 1.6;
+   
+}
+
+.footer-icons{
+    font-size: 1.4rem;
+    margin-bottom: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    
+}
+
+footer a:hover {
+    text-transform: uppercase;
+}
+
+
+
+
+
